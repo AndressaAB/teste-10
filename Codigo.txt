@@ -1,0 +1,16 @@
+public class Item
+    {
+        private int value;
+        private List<Item> child;
+
+        public int sum()
+        {
+            int soma = 0;
+            foreach (Item i in child)
+            {
+                soma =+ i.value;
+                soma =+ i.sum();  
+            }            
+            return soma;
+        }
+    }
